@@ -34,6 +34,10 @@
 * data type optimize
   * before storing the processed data optimize the data type.
 
+## __Utils:__
+
+* Upload csv/xlsx or any other flat file.
+
 
 __Reference:__
 
