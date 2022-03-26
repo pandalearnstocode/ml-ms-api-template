@@ -1,10 +1,7 @@
 from __future__ import annotations
 import pandas as pd
-import os
-import io, base64
 from io import StringIO
 from fastapi import APIRouter, Depends, File, UploadFile, Form
-
 from app.lib.ml.mainmod import main_func as main_func_a
 from app.lib.de.mainmod import main_func as main_func_b
 from app.core.auth import get_current_user
@@ -34,15 +31,20 @@ async def view_b(
     return main_func_b(num)
 
 
-@router.post('/uploadfile/', tags=["utils"]
+@router.post('/uploadfile/', tags=["utils"])
 async def create_data_file(
         experiment: str = Form(...),
         file_type: str = Form(...),
         file_id: str = Form(...),
         data_file: UploadFile = File(...),
         ):
-    pd.read_csv(StringIO(str(data_file.file.read(), 'utf-16')), encoding='utf-16')
+    upload_df = pd.read_csv(StringIO(str(data_file.file.read(), 'utf-8')), encoding='utf-8')
+    df_cols_list = list(upload_df.columns)
+    df_dtypes_dict = upload_df.dtypes.apply(lambda x: x.name).to_dict()
+    
     return {'filename': data_file.filename, 
             'experiment':experiment, 
             'file_type': file_type, 
-            'file_id': file_id}
+            'file_id': file_id,
+            'df_cols_list': df_cols_list,
+            'df_dtypes': df_dtypes_dict}
