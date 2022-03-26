@@ -1,7 +1,6 @@
 # Microservice template using FastAPI for ML engine & related workflow
 
-
-## Modelling Data I/O
+## __Modelling Data I/O__
 
 * upload: a user will upload a data
 * api: we will fetch data from some api
@@ -10,7 +9,7 @@
 * read from file share: a user will give some parameter, using data we will read data from a attached file share
 * file system: : a user will give some parameter, using data we will read data from local file system
 
-## Data processing
+## __Data processing__
 
 * validate
   * expected columns are present
@@ -36,4 +35,7 @@
   * before storing the processed data optimize the data type.
 
 
-Reference: https://github.com/rednafi/fastapi-nano#
+__Reference:__
+
+* https://github.com/rednafi/fastapi-nano#
+* https://fastapi-crudrouter.awtkns.com/
