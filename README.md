@@ -1,4 +1,4 @@
-# API template
+# Microservice template using FastAPI for ML engine & related workflow
 
 
 ## Modelling Data I/O
@@ -36,4 +36,4 @@
   * before storing the processed data optimize the data type.
 
 
-Reference: https://github.com/rednafi/fastapi-nano# ms-ml-be-api-template
+Reference: https://github.com/rednafi/fastapi-nano#
