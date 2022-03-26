@@ -34,7 +34,7 @@ async def view_b(
     return main_func_b(num)
 
 
-@router.post('/uploadfile/')
+@router.post('/uploadfile/', tags=["utils"]
 async def create_data_file(
         experiment: str = Form(...),
         file_type: str = Form(...),
