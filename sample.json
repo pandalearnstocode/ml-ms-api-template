@@ -1,0 +1,17 @@
+{
+    "chart_data": {
+        "TV": [
+              { "name": "Sports TV", "value": 400, "fill": "#0088FE" },
+              { "name": "Late Night TV", "value": 300, "fill": "#00C49F" },
+              { "name": "News TV", "value": 300, "fill": "#FFBB28" },
+              { "name": "Comedy TV", "value": 200, "fill": "#FF8042" }
+            ],
+        "Radio": [
+          { "name": "Radio channel 1", "value": 400, "fill": "#0088FE" },
+          { "name": "Radio channel 2", "value": 300, "fill": "#00C49F" },
+          { "name": "Radio channel 3", "value": 300, "fill": "#FFBB28" }
+        ]
+    },
+    "value_type":"pct",
+    "chart_type":"pie"
+}
