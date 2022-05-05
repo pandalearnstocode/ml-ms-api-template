@@ -14,7 +14,11 @@ cffi==1.15.0
     # via bcrypt
 click==8.0.4
     # via uvicorn
-fastapi==0.75.0
+fastapi==0.76.0
+    # via
+    #   -r requirements.in
+    #   fastapi-crudrouter
+fastapi-crudrouter==0.8.5
     # via -r requirements.in
 gunicorn==20.1.0
     # via -r requirements.in
@@ -40,13 +44,12 @@ six==1.16.0
     #   python-multipart
 sniffio==1.2.0
     # via anyio
-starlette==0.17.1
+starlette==0.18.0
     # via fastapi
 typing-extensions==4.1.1
     # via pydantic
 uvicorn==0.17.6
     # via -r requirements.in
-fastapi-crudrouter
-pandas
+
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
