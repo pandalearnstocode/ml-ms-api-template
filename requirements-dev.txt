@@ -5,7 +5,9 @@
 #    pip-compile --no-emit-options --output-file=requirements-dev.txt requirements-dev.in
 #
 anyio==3.5.0
-    # via httpcore
+    # via
+    #   httpcore
+    #   starlette
 attrs==21.4.0
     # via pytest
 black==22.1.0
@@ -23,6 +25,10 @@ click==8.0.4
     # via
     #   black
     #   pip-tools
+fastapi==0.89.1
+    # via fastapi-crudrouter
+fastapi-crudrouter==0.8.5
+    # via -r requirements-dev.in
 flake8==4.0.1
     # via -r requirements-dev.in
 h11==0.12.0
@@ -60,15 +66,15 @@ platformdirs==2.5.1
     # via black
 pluggy==1.0.0
     # via pytest
-py==1.11.0
-    # via pytest
 pycodestyle==2.8.0
     # via flake8
+pydantic==1.10.4
+    # via fastapi
 pyflakes==2.4.0
     # via flake8
 pyparsing==3.0.7
     # via packaging
-pytest==7.1.1
+pytest==7.2.1
     # via -r requirements-dev.in
 requests==2.27.1
     # via -r requirements-dev.in
@@ -79,20 +85,22 @@ sniffio==1.2.0
     #   anyio
     #   httpcore
     #   httpx
+starlette==0.22.0
+    # via fastapi
 tomli==2.0.1
     # via
     #   black
     #   mypy
     #   pep517
-    #   pytest
-typing-extensions==4.1.1
-    # via mypy
+typing-extensions==4.4.0
+    # via
+    #   mypy
+    #   pydantic
 urllib3==1.26.9
     # via requests
 wheel==0.37.1
     # via pip-tools
-fastapi-crudrouter
-pandas
+
 # The following packages are considered to be unsafe in a requirements file:
 # pip
 # setuptools
